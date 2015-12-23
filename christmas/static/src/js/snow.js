@@ -675,9 +675,11 @@ $(document).ready( function() {
             var tmp = openerp.web.last_blockUI();
             $('.spinner').remove();
             if (($('.rudolf_spinner') || []).length === 0){
+                var img_str = (new Date().getDate() != 28) ?
+                  'christmas/static/src/img/rudolf.gif' : 'christmas/static/src/img/inocente.png';
                 var rudolf = $('<img class="rudolf_spinner">')
                         .css('margin-top', '-35%')
-                        .attr('src', 'christmas/static/src/img/rudolf.gif');
+                        .attr('src', img_str);
                     rudolf.prependTo($(".oe_blockui_spin_container"));
             }
             return tmp;

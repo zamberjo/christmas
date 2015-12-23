@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 
 {
-    'name': 'Snow!',
+    'name': 'Merry Christmas!',
     'version': '1.0',
     'description':
         """

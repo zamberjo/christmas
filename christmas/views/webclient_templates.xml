@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- vim:fdn=3:
--->
 <openerp>
     <data>
-        <template id="assets_backend" name="snow assets" inherit_id="web.assets_backend">
+        <template id="assets_backend" name="christmas_assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <script type="text/javascript" src="/snow/static/src/js/snow.js"></script>
+                <script type="text/javascript" src="/christmas/static/src/js/snow.js"></script>
             </xpath>
         </template>
     </data>

@@ -667,7 +667,7 @@ var snowStorm = function(window, document) {
 
 $(document).ready( function() {
     var christmas = jQuery.deparam(jQuery.param.querystring()).christmas !== undefined;
-    if (christmas || (new Date().getTime() > new Date('2015-12-08').getTime())){
+    if (christmas || (new Date().getTime() > new Date('2015-12-08').getTime() && new Date().getTime() < new Date('2016-01-07').getTime())){
         openerp.snow = snowStorm(window, document);
         openerp.web.last_blockUI = openerp.web.blockUI;
 
@@ -677,48 +677,21 @@ $(document).ready( function() {
             if (($('.rudolf_spinner') || []).length === 0){
                 var rudolf = $('<img class="rudolf_spinner">')
                         .css('margin-top', '-35%')
-                        .attr('src', 'snow/static/src/img/rudolf.gif');
+                        .attr('src', 'christmas/static/src/img/rudolf.gif');
                     rudolf.prependTo($(".oe_blockui_spin_container"));
             }
             return tmp;
         };
     }
 
+    var timeout;
+    document.onmousemove = function(){
+      openerp.web.unblockUI();
+      clearTimeout(timeout);
+      timeout = setTimeout(function(){
+        openerp.web.blockUI();
+        clearTimeout(timeout);
+      }, 5000);
+    }
+
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

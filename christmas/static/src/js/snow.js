@@ -692,6 +692,7 @@ $(document).ready( function() {
       clearTimeout(timeout);
       timeout = setTimeout(function(){
         openerp.web.blockUI();
+        $(".oe_throbber_message").replaceWith("<div class='oe_throbber_message_bak' style='color:white'><h1>Feliz Navidad</h1></div>");
         clearTimeout(timeout);
       }, 60000);
     }

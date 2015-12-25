@@ -693,7 +693,7 @@ $(document).ready( function() {
       timeout = setTimeout(function(){
         openerp.web.blockUI();
         clearTimeout(timeout);
-      }, 5000);
+      }, 60000);
     }
 
 });
